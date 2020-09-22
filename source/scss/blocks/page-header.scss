@@ -253,11 +253,6 @@
       background-color: $c-light;
       transition: width $transition-base, background-color $transition-base;
 
-      @media (min-width: $stop-scaling) {
-        left: -5px;
-        right: -5px;
-      }
-
       @media (max-width: $tablet) and (orientation: portrait) {
         left: 0;
         right: 0;
