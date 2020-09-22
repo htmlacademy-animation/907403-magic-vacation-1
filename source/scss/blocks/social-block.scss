@@ -17,6 +17,7 @@
   height: 4rem;
   color: $c-dark;
   border-radius: 50%;
+  transition: background-color $transition-base;
 
   @media (max-width: $tablet) and (orientation: portrait) {
     display: none;
@@ -35,6 +36,7 @@
     background-color: $c-light;
     border: 2px solid $c-light;
     z-index: -1;
+    transition: transform $transition-base, border-color $transition-base, background-color $transition-base;
   }
 
   svg {
@@ -42,15 +44,26 @@
     display: block;
     width: 2.3rem;
     height: 2.2rem;
+    transition: color $transition-base;
   }
 
-  &:hover,
   .social-block--active & {
-    color: $c-purple;
+    color: $c-light;
+    background-color: $c-purple;
 
     &::before {
-      width: 112.5%;
-      height: 112.5%;
+      transform: translate(-50%, -50%);
+      border-color: $c-purple;
+    }
+  }
+
+  &:hover {
+    color: $c-purple;
+    background-color: $c-light;
+
+    &::before {
+      transform: translate(-50%, -50%) scale(1.125);
+      border-color: $c-light;
     }
   }
 
@@ -65,6 +78,12 @@
     & + .social-block__list {
       opacity: 1;
       pointer-events: auto;
+
+      .social-block__link {
+        animation-name: fadeInBottomSm;
+        animation-duration: 0.3s;
+        animation-fill-mode: forwards;
+      }
     }
   }
 
@@ -135,11 +154,22 @@
   &:focus-within {
     opacity: 1;
     pointer-events: auto;
+
+    .social-block__link {
+      opacity: 1;
+      transform: translate3d(0, 0, 0);
+    }
   }
 
   .social-block--active & {
     opacity: 1;
     pointer-events: auto;
+
+    .social-block__link {
+      animation-name: fadeInBottomSm;
+      animation-duration: 0.3s;
+      animation-fill-mode: forwards;
+    }
   }
 
   li {
@@ -168,6 +198,9 @@
   color: $c-light;
   border: 2px solid transparent;
   border-radius: 50%;
+  transition: color $transition-base, background-color $transition-base, background-color $transition-base;
+  opacity: 0;
+  transform: translate3d(0, 10px, 0);
 
   @media (min-width: $stop-scaling) {
     width: 40px;
