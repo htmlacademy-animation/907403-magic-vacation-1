@@ -2,13 +2,14 @@
 //---------------------------------
 
 @import "vendor/swiper";
-@import "general/mixins";
+@import "vendor/normalize";
+
 
 // Global
 //---------------------------------
 
 @import "general/variables";
-@import "vendor/normalize";
+@import "general/mixins";
 @import "general/fonts";
 @import "general/scaffolding";
 @import "general/keyframes";
