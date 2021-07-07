@@ -96,6 +96,22 @@
   max-width: 34rem;
   font-size: 1.8rem;
   line-height: 2rem;
+  opacity: 0;
+  transform: translate3d(30px, 0, 0);
+
+  .swiper-slide-active & {
+    animation-name: fadeInRight;
+    animation-duration: 0.5s;
+    animation-delay: 0.3s;
+    animation-fill-mode: forwards;
+  }
+
+  .swiper-slide-next & {
+    animation-name: fadeInRight;
+    animation-duration: 0.5s;
+    animation-delay: 0.5s;
+    animation-fill-mode: forwards;
+  }
 
   @media (min-width: $stop-scaling) {
     margin-top: 36px;

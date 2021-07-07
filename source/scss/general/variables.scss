@@ -1,21 +1,46 @@
-$c-light: #ffffff;
-$c-dark: #5f458c;
-$c-purple: #a67ee5;
+// Colors
+//---------------------------------
 
-$font: "Proxima Nova", "Arial", sans-serif;
-$font-alt: "Radical",  "Arial", sans-serif;
+$c-light:                    #ffffff;
+$c-dark:                     #5f458c;
+$c-purple:                   #a67ee5;
 
-$stop-scaling: 2000px;
+// Font Family
+//---------------------------------
 
-$wide-screen: "min-aspect-ratio: 1680/650";
+$font:                       "Proxima Nova", "Arial", sans-serif;
+$font-alt:                   "Radical",  "Arial", sans-serif;
 
-$wider: "min-aspect-ratio: 1441/760";
-$narrower: "max-aspect-ratio: 1439/760";
+// Stop scaling point
+//---------------------------------
 
-$tablet: 1024px;
-$mobile: 768px;
+$stop-scaling:               2000px;
 
-$retina-dpi: 144dpi;
-$retina-dppx: 1.5dppx;
+// Aspect ratio
+//---------------------------------
 
-$index: 1.38871;
+$wide-screen:                "min-aspect-ratio: 1680/650";
+$wider:                      "min-aspect-ratio: 1441/760";
+$narrower:                   "max-aspect-ratio: 1439/760";
+
+// Viewports
+//---------------------------------
+
+$tablet:                     1024px;
+$mobile:                     768px;
+
+// Retina
+//---------------------------------
+
+$retina-dpi:                 144dpi;
+$retina-dppx:                1.5dppx;
+
+// Index
+//---------------------------------
+
+$index:                      1.38871;
+
+// Animation
+//---------------------------------
+
+$transition-base:            0.3s ease-in-out;
